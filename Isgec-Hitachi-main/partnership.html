@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <style>
+      
+      
+
+    /* Add space to the left and right of paragraphs */
+    main {
+      padding-left: 20px;
+      padding-right: 20px;
+      
+    }
+
+    body {
+    background: linear-gradient(135deg, #e0e7ff, #f3f4f6); /* Soft gradient from light blue to light gray */
+    color: #2c3e50; /* A darker, professional shade of blue-gray for text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern sans-serif font */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <navbar>
+      <nav>
+        <ul>
+          <li id="company-title">ISGEC Heavy Engineering</li>
+        </ul>
+        <ul>
+          <li id="activeHome"><a href="index.html" class="home">Home</a></li>
+          <li><a href="partnership.html" class="home">Partnerships</a></li>     
+          <li><a href="about.html" class="home">About Us</a></li>
+          <li><a href="contact.html" class="home">Contact</a></li>
+        </ul>
+        <svg
+          onclick="openMenu()"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#e8eaed"
+        >
+          <path
+            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            class="menu-icon"
+          />
+        </svg>
+      </nav>
+      <div class="menu">
+        <ul>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#33333"
+            onclick="closeMenu()"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+          <li id="activeHome"><a href="index.html" class="home">Home</a></li>
+          <li><a href="partnership.html" class="home">Partnerships</a></li>     
+          <li><a href="about.html" class="home">About Us</a></li>
+          <li><a href="contact.html" class="home">Contact</a></li>
+        </ul>
+      </div>
+    </navbar>
+    
+    <main>
+      <h1>Our Services</h1>
+      <p>Details about the services we offer.</p>
+      <div>
+        <img id="servies-bg" src="./assets/partnership.png" alt="" style="padding-right: 40px;">
+
+        <h1>Isgec - Hitachi Partnership</h1>
+        <p style="text-align: justify;">
+          ISGEC Heavy Engineering is a distinguished industrial powerhouse committed to delivering excellence in engineering and manufacturing solutions across multiple sectors. Our expertise encompasses the design, fabrication, and commissioning of critical equipment and infrastructure for industries such as power, sugar, cement, and steel. With a strong foundation built on innovation and quality, ISGEC leverages advanced technology and skilled craftsmanship to meet the unique needs of clients worldwide. Beyond manufacturing, we emphasize strategic partnerships and collaborative ventures, enabling us to expand our capabilities and deliver comprehensive, end-to-end solutions. Our unwavering dedication to customer satisfaction and sustainable practices positions ISGEC as a trusted partner in driving industrial progress and empowering businesses globally.
+        </p>
+        <div class="service-images-combo">
+          <img src="./assets/product11.jpg" alt="">
+        </div>
+        <h1>Hitachi Zosen Corporation, Japan </h1>        
+        <p style="text-align: justify;">
+          Hitachi Zosen Corporation, Japan, established in 1881 and headquartered in Osaka, is a leading engineering and industrial company known for its expertise in infrastructure, environmental solutions, and industrial machinery. Originally founded as Osaka Iron Works by British entrepreneur Edward H. Hunter, Hitachi Zosen has evolved into a global corporation with more than 12,000 employees. The company specializes in designing, building, and maintaining a variety of projects, including energy-from-waste plants, desalination facilities, water and sewage treatment plants, marine diesel engines, and advanced industrial machinery. In recent years, Hitachi Zosen has become a pioneer in clean energy and carbon-neutral technologies, focusing on sustainable solutions such as hydrogen production and innovative waste management. Guided by a philosophy of creating value for society through technology and sincerity, Hitachi Zosen continues to contribute to sustainable development and environmental responsibility across Asia, Europe, North America, and the Middle East.
+        </p>
+      </div>
+    </main>
+    <!-- Footer Section -->
+  <div id="footer-container"></div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    // Load the footer HTML only once
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        // Make sure to only insert the footer if it hasn't been added yet
+        const footerContainer = document.querySelector('#footer-container');
+        if (!footerContainer.innerHTML.trim()) {
+          footerContainer.insertAdjacentHTML('beforeend', data);
+        }
+      })
+      .catch(error => console.error('Error loading footer:', error));
+
+    // Show or hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Smooth scroll to top
+    document.getElementById('scrollToTopBtn').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="LB-XpyrLZLHkvrXE1njqy";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+  </body>
+</html>

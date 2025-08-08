@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+      
+      #footer-container {
+          margin-top: 30px; /* Adjust the value as needed */
+      }
+
+      
+    
+    </style>
+    
+</head>
+<body>
+    <navbar>
+        <nav>
+            <ul>
+                <li id="company-title">ISGEC Heavy Engineering</li>
+            </ul>
+            <ul>
+                <li id="activeHome"><a href="index.html" class="home">Home</a></li>     
+                <li><a href="partnership.html" class="home">Partnerships</a></li>     
+                <li><a href="about.html" class="home">About Us</a></li>
+                <li><a href="contact.html" class="home">Contact</a></li>
+            </ul>
+            <svg onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" class="menu-icon"/>
+            </svg>
+        </nav>
+        <div class="menu">
+          <ul>
+            <svg
+            onclick="openMenu()"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              class="menu-icon"
+            />
+          </svg>
+              <li id="activeHome"><a href="index.html" class="home">Home</a></li>
+              <li><a href="partnership.html" class="home">Partnerships</a></li>  
+              <li><a href="about.html" class="home">About Us</a></li>
+              <li><a href="contact.html" class="home">Contact</a></li>
+          </ul>
+      </div>
+    </navbar>
+    
+    <main>
+      <img src="assets/Office_1.png" alt="Background image" class="background-clip" />
+        <div class="hero-title">
+            <h1>Welcome to <span id="brand">ISGEC Heavy Engineering</span></h1>
+            <p>Dedicated to more than recruitment; we build futures.</p>
+            <p>
+              ISGEC Heavy Engineering drives industrial innovation by delivering robust and precision-engineered solutions worldwide.
+            </p>
+        </div>
+    </main>
+    <div class="section-2">
+        <!-- <h1>Our Services</h1> -->
+        <img id="servies-bg" src="./assets/Isgec_chart.png" alt="">
+        
+    </div>
+    <section class="company-operations">
+      <h2>Company Overview</h2>
+      <br />
+      <p>
+          At ISGEC Heavy Engineering Ltd., we leverage over 90 years of expertise to engineer and manufacture diversified industrial solutions—ranging from process equipment and boilers to hydraulic presses—delivering sustainable, state-of-the-art products to customers in 92 countries worldwide. Our commitment to engineering excellence drives innovation and reliable project execution, empowering industries across sectors to achieve operational distinction. With expansive manufacturing facilities and advanced technology partnerships, ISGEC stands as a trusted global engineering partner dedicated to quality and customer success.
+      </p>
+      <br />
+      <p>
+          ISGEC Heavy Engineering specializes in delivering innovative engineering and manufacturing solutions primarily for the power, sugar, cement, steel, and infrastructure sectors. With deep expertise in designing and fabricating critical process equipment, boilers, pressure vessels, and heavy machinery, ISGEC ensures high-quality, reliable products that meet stringent industry standards. Recognizing the importance of technological advancement and sustainability, we continuously invest in research and development and strategic partnerships to enhance our capabilities. Our comprehensive approach combines superior engineering, customized solutions, and after-sales support to empower industries globally, driving operational excellence and long-term growth for our clients.
+      </p>
+  </section>
+    <!-- Footer Section -->
+    <div id="footer-container"></div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 15l7-7 7 7"></path>
+      </svg>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script>
+      // Load the footer HTML only once
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          // Ensure the footer is only inserted once
+          const footerContainer = document.querySelector('#footer-container');
+          if (!footerContainer.querySelector('.footer')) {  // Use a specific check for existing footer element
+            footerContainer.insertAdjacentHTML('beforeend', data);
+          } else {
+            console.log('Footer already exists, not adding again.');
+          }
+        })
+        .catch(error => console.error('Error loading footer:', error));
+
+      // Show or hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Smooth scroll to top
+    document.getElementById('scrollToTopBtn').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    </script>
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="LB-XpyrLZLHkvrXE1njqy";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+</html>
