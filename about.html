@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <link rel="stylesheet" href="footer.css" />
+    <style>
+       
+      h1 {
+              text-align: center;
+          }
+
+       /* Include styles for the updated section here */
+       .company-operations {
+            background: #f0f4f8;  /* Clean white background for a professional look */
+            padding: 40px 30px;
+            border-left: 5px solid #0077b6; /* A bold left border to add a visual accent */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Light shadow for a floating effect */
+            margin-top: 30px;
+            
+            
+            transition: transform 0.2s ease-in-out; /* Adds a subtle hover effect */
+        }
+
+        .company-operations:hover {
+            transform: translateY(-5px); /* Lifts the section slightly on hover */
+        }
+
+        .company-operations h2 {
+            color: #005f73; /* A modern and calm dark teal color for the heading */
+            font-size: 1.75rem;
+            font-weight: 700; /* Bold for emphasis */
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #dce2e8; /* Subtle underline to separate heading */
+        }
+
+        .company-operations p {
+            line-height: 1.7;
+            color: #333333; /* Neutral dark gray for easy reading */
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            text-align: justify; /* Keeps the text neatly aligned */
+            padding-left: 10px; /* Aligns with the border for visual balance */
+        }
+
+        .company-operations p:last-child {
+            margin-bottom: 0; /* No margin for the last paragraph */
+        }
+
+        @media (max-width: 768px) {
+            .company-operations {
+                padding: 30px 20px; /* Adjust padding for smaller screens */
+            }
+
+            .company-operations h2 {
+                font-size: 1.5rem; /* Smaller heading size on mobile */
+            }
+        }
+
+
+        
+
+        body {
+        background: linear-gradient(135deg, #e0e7ff, #f3f4f6); /* Soft gradient from light blue to light gray */
+        color: #2c3e50; /* A darker, professional shade of blue-gray for text */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern sans-serif font */
+        margin: 0;
+        padding: 0;
+    }
+
+    .address-map {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f8f9fa;
+      flex-wrap: wrap;
+    }
+
+    .address {
+      max-width: 400px;
+    }
+
+    .address h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .address p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .contact-info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+
+    </style>
+</head>
+<body>
+  <navbar>
+    <nav>
+      <ul>
+        <li id="company-title">ISGEC Heavy Engineering</li>
+      </ul>
+      <ul>
+        <li id="activeHome"><a href="index.html" class="home">Home</a></li>
+        <li><a href="partnership.html" class="home">Partnerships</a></li>     
+        <li><a href="about.html" class="home">About Us</a></li>
+        <li><a href="contact.html" class="home">Contact</a></li>
+      </ul>
+      <svg
+        onclick="openMenu()"
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e8eaed"
+      >
+        <path
+          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+          class="menu-icon"
+        />
+      </svg>
+    </nav>
+    <div class="menu">
+      <ul>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#33333"
+          onclick="closeMenu()"
+        >
+          <path
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+          />
+        </svg>
+        <li id="activeHome"><a href="index.html" class="home">Home</a></li>
+        <li><a href="partnership.html" class="home">Partnerships</a></li>     
+        <li><a href="about.html" class="home">About Us</a></li>
+        <li><a href="contact.html" class="home">Contact</a></li>
+      </ul>
+    </div>
+  </navbar>
+    
+
+    <main>
+        <div class="section-2">
+            <h1>Our Team</h1>
+            <div class="carousal">
+                <img src="assets\Screenshot 2025-08-06 021701.jpg" width="50%" height="100%" class="card" />
+                <img src="assets\Screenshot 2025-08-06 021530.jpg" width="50%" height="100%" class="card"/>
+                <img src="assets\Screenshot 2025-08-06 021554.jpg" width="50%" height="100%" class="card" />
+                <img src="assets\Screenshot 2025-08-06 021625.jpg" width="50%" height="100%" class="card" />
+            </div>
+        </div>
+        <h1>About Us</h1>
+        <section class="company-operations">
+            <h2>Details of Group Operations</h2>
+            <p>
+                At ISGEC, we are dedicated to delivering innovative engineering solutions that surpass traditional industry standards. Our expertise spans a broad spectrum of manufacturing domains, ensuring that our clients receive high-quality, customized products and services. We specialize in integrating advanced technology with sustainable practices to optimize operational efficiency and promote environmental stewardship. Our commitment to excellence drives us to build strong partnerships globally, fostering growth and creating value in every market we serve.             </p>
+            <p>
+                Our operations are particularly focused on the international placement of Indian personnel, offering specialized services in supplying highly skilled IT professionals, including students, to the Japanese job market. We understand the complexities of cross-cultural employment, which is why we provide tailored Japanese language training to our candidates. This ensures that they are not only prepared to meet the demands of their roles but are also equipped to thrive in the unique cultural environment of Japan. In addition to IT professionals, we facilitate the placement of Indian experts in various other sectors, including nursing care and food processing, making a significant impact in multiple industries. By ensuring our personnel are well-prepared and culturally adept, we help them integrate smoothly into Japanese companies, fostering successful and long-lasting employment relationships. Through these efforts, Mega Group continues to be a bridge connecting diverse talent with global opportunities, driving both professional growth and international collaboration.
+            </p>
+        </section>
+
+        <!-- Address and Map Section -->
+  <section class="address-map">
+    <div class="address">
+      <h2>Our Address</h2>
+      <p>
+        A-4, Sector-24<br>     
+        NOIDA - 201 301<br>
+        Uttar Pradesh<br>
+        India
+      </p>
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p>Phone: <a href="tel:+911123456789">03-5458-2311</a></p>
+        <p>Email: <a href="mailto:info@isgec.com">info@isgec.com</a></p>
+      </div>
+    </div>
+    <div class="map">
+      /* Google Maps Embed */
+      <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14014.063750909896!2d77.33678911265112!3d28.584295010945603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a7a02b7cb3%3A0x21f5fe5d8976f96c!2sIsgec%20Heavy%20Engineering%20Ltd.!5e0!3m2!1sen!2sin!4v1754464894550!5m2!1sen!2sin" 
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-hidden="false"
+      ></iframe>
+    </div>
+  </section>
+    </main>
+    <!-- Footer Section -->
+  <div id="footer-container"></div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    // Load the footer HTML only once
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        // Make sure to only insert the footer if it hasn't been added yet
+        const footerContainer = document.querySelector('#footer-container');
+        if (!footerContainer.innerHTML.trim()) {
+          footerContainer.insertAdjacentHTML('beforeend', data);
+        }
+      })
+      .catch(error => console.error('Error loading footer:', error));
+
+    // Show or hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Smooth scroll to top
+    document.getElementById('scrollToTopBtn').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });  
+  </script>
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="LB-XpyrLZLHkvrXE1njqy";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+</html>
